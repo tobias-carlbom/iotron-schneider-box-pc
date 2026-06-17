@@ -1,0 +1,349 @@
+object FormTastieraNumerica: TFormTastieraNumerica
+  Left = 85
+  Top = 211
+  BorderStyle = bsNone
+  Caption = 'FormTastieraNumerica'
+  ClientHeight = 267
+  ClientWidth = 482
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PanTast: TPanel
+    Left = 0
+    Top = 0
+    Width = 481
+    Height = 267
+    BevelInner = bvLowered
+    BevelWidth = 2
+    Color = clNavy
+    UseDockManager = False
+    DragCursor = crDefault
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    object EditTast: TEdit
+      Left = 20
+      Top = 28
+      Width = 173
+      Height = 45
+      Cursor = crHandPoint
+      AutoSelect = False
+      AutoSize = False
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -28
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      MaxLength = 5
+      ParentFont = False
+      TabOrder = 10
+      Text = '   '
+    end
+    object BtnTastEsci: TBitBtn
+      Left = 20
+      Top = 182
+      Width = 75
+      Height = 65
+      Cursor = crHandPoint
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 11
+      OnClick = BtnTastEsciClick
+      Glyph.Data = {
+        56020000424D560200000000000076000000280000001E0000001E0000000100
+        040000000000E001000000000000000000001000000000000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        8888888888888888880087777777777777777777777777777800877777777777
+        7777777777777777780087777777777777777777777777777800877777777700
+        0777777777777777780087777000003307777777777777777800800003333333
+        000000000000000008008803333333330BBB3088888888888800880333333333
+        0BBB30888888888888008803333333330BBB3088888888888800880333333333
+        0BBB30888888888888008803333333330BBB3088888888888800880333333333
+        0BBB30888888888888008803333333330BBB3088988888888800880333300033
+        0BBB30899888888888008803333333330BBB3099999999998800880333333333
+        0BBB39999999999988008803333333330BBB3099999999998800880333333333
+        0BBB30899888888888008803333333330BBB3088988888888800880333333333
+        0BBB30888888888888008803333333330BBB3088888888888800880333333333
+        0BBB30888888888888008803333333000BBB30888888888888008803330000BB
+        BBBB3088888888888800880000BBBBBBBBBB3088888888888800880333333333
+        3333308888888888880088000000000000000088888888888800888888888888
+        8888888888888888880088888888888888888888888888888800}
+    end
+    object BtnTastCanc: TBitBtn
+      Left = 111
+      Top = 98
+      Width = 75
+      Height = 65
+      Cursor = crHandPoint
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 12
+      OnClick = BtnTastCancClick
+      Glyph.Data = {
+        AE040000424DAE0400000000000076000000280000002D0000002D0000000100
+        0400000000003804000000000000000000001000000000000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+        7777777777777777777777777777777770007777777777777777777777777777
+        7777777777777777700077777777777777777777777777777777777777777777
+        7000777777777777777777777777777777777777777777777000777777777777
+        7777777777777777777777777777777770007777777777777777777777777777
+        7777777777777777700077777777777777777777777777777777777777777777
+        7000777777777777777777777777777777777777777777777000777777777777
+        7777777777777777777777777777777770007777777777777777777777777777
+        7777777777777777700077777777777777777777777777FFFFFFFFFFFF777777
+        700077777777777777777777777FFFFFFFFFFFFFFFF777777000777777777777
+        7777777777FFFFFFFFFFFFFFFFF777777000777777777777777709077FFFFFFF
+        FFFFFFFFFF7777777000777777777777777099907FFFFFFFFFFFFFFFFF777777
+        7000777777777777770999990FFFFFFFFFFFFFFFFFF777777000777777777777
+        7099999990FFFFFFFFFFFFFFFFF777777000777777777777099999999907FFFF
+        FFFFFFFFFFF7777770007777777777700999999999F07FFFFFFFFFFFFF777777
+        7000777777777707709999999F90777777777777777777777000777777777077
+        77099999F9077777777777777777777770007777777707777770999F90777777
+        77777777777777777000777777707777777709F9077777777777777777777777
+        7000777777077777777770907777777777777777777777777000777770B07777
+        7777F707777777777777777777777777700077770BBB0777777F707777777777
+        777777777777777770007770BBBBB07777F70777777777777777777777777777
+        7000770BBBBBBB077F707777777777777777777777777777700070BBBBBBBBB0
+        F707777777777777777777777777777770000BBBBBBBBBBF0077777777777777
+        77777777777777777000BBBBBBBBBBFB07777777777777777777777777777777
+        7000BBBBBBBBBFB07777777777777777777777777777777770007BBBBBBBFB07
+        7777777777777777777777777777777770007BBBBBBFB0777777777777777777
+        777777777777777770007BBBBBFB077777777777777777777777777777777777
+        700077BBBFB0777777777777777777777777777777777777700077BBFB077777
+        7777777777777777777777777777777770007777B07777777777777777777777
+        7777777777777777700077770777777777777777777777777777777777777777
+        7000777777777777777777777777777777777777777777777000777777777777
+        7777777777777777777777777777777770007777777777777777777777777777
+        7777777777777777700077777777777777777777777777777777777777777777
+        7000777777777777777777777777777777777777777777777000777777777777
+        777777777777777777777777777777777000}
+    end
+    object BtnTastSalva: TBitBtn
+      Left = 20
+      Top = 98
+      Width = 75
+      Height = 65
+      Cursor = crHandPoint
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 13
+      OnClick = BtnTastSalvaClick
+      Glyph.Data = {
+        76020000424D7602000000000000760000002800000020000000200000000100
+        04000000000000020000CE0E0000D80E00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333333333333333333333333333333333333333333333330000000077
+        7777777777770000333333000000007777777777777700003333000000000077
+        8888888888880000003300000000007788888888888800000033000000000077
+        8800008888880000003300000000007788000088000800000033000000000077
+        8800008888880000003300000000007788000088000800000033000000000077
+        8888888888880000003300000000007788888888888800000033000000000000
+        0000000000000000003300000000000000000000000000000033000000000000
+        0000000000000000003300000000000000000000000000000033000000FFFFFF
+        FFFFFFFFFFFF00000033000000FFFFFFFFFFFFFFFFFF00000033000000FFFFFF
+        FFFFFFFFFFFF00000033000000FFFFFFFFFFFFFFFFFF00000033000000FF0000
+        0000000000FF00000033000000FFFFFFFFFFFFFFFFFF00000033000000FFFFFF
+        FFFFFFFFFFFF00000033000000FF00000000000000FF00000033000000FFFFFF
+        FFFFFFFFFFFF00000033000000FFFFFFFFFFFFFFFFFF00000033000000FF0000
+        0000000000FF00770033000000FFFFFFFFFFFFFFFFFF00770033000000FFFFFF
+        FFFFFFFFFFFF00000033000000FFFFFFFFFFFFFFFFFF00000033330000999999
+        9999999999990000333333000099999999999999999900003333}
+    end
+    object BuZero: TButton
+      Left = 111
+      Top = 182
+      Width = 72
+      Height = 66
+      Cursor = crHandPoint
+      Caption = '0'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 9
+      OnClick = BuTastClick
+    end
+    object BuUno: TButton
+      Tag = 1
+      Left = 210
+      Top = 182
+      Width = 72
+      Height = 66
+      Cursor = crHandPoint
+      Caption = '1'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 8
+      OnClick = BuTastClick
+    end
+    object BuDue: TButton
+      Tag = 2
+      Left = 301
+      Top = 182
+      Width = 72
+      Height = 66
+      Cursor = crHandPoint
+      Caption = '2'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 7
+      OnClick = BuTastClick
+    end
+    object BuTre: TButton
+      Tag = 3
+      Left = 392
+      Top = 182
+      Width = 72
+      Height = 66
+      Cursor = crHandPoint
+      Caption = '3'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 6
+      OnClick = BuTastClick
+    end
+    object BuQuattro: TButton
+      Tag = 4
+      Left = 210
+      Top = 98
+      Width = 72
+      Height = 65
+      Cursor = crHandPoint
+      Caption = '4'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 5
+      OnClick = BuTastClick
+    end
+    object BuCinque: TButton
+      Tag = 5
+      Left = 301
+      Top = 98
+      Width = 72
+      Height = 65
+      Cursor = crHandPoint
+      Caption = '5'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = BuTastClick
+    end
+    object BuSei: TButton
+      Tag = 6
+      Left = 392
+      Top = 98
+      Width = 72
+      Height = 65
+      Cursor = crHandPoint
+      Caption = '6'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+      OnClick = BuTastClick
+    end
+    object BuSette: TButton
+      Tag = 7
+      Left = 210
+      Top = 20
+      Width = 72
+      Height = 65
+      Cursor = crHandPoint
+      Caption = '7'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      OnClick = BuTastClick
+    end
+    object BuOtto: TButton
+      Tag = 8
+      Left = 301
+      Top = 20
+      Width = 72
+      Height = 65
+      Cursor = crHandPoint
+      Caption = '8'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
+      OnClick = BuTastClick
+    end
+    object BuNove: TButton
+      Tag = 9
+      Left = 392
+      Top = 20
+      Width = 72
+      Height = 65
+      Cursor = crHandPoint
+      Caption = '9'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnClick = BuTastClick
+    end
+  end
+end

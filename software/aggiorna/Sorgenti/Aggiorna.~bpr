@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="C:\Aggiorna\Eseguibile\Aggiorna.exe"/>
+    <OBJFILES value="Obj\Aggiorna.obj Obj\Main.obj Obj\PascalUty.obj Obj\GenModParam.obj 
+      Obj\Ethernet.obj Obj\TastieraNumerica.obj Obj\Tastiera.obj"/>
+    <RESFILES value="Aggiorna.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Main.dfm GenModParam.dfm TastieraNumerica.dfm Tastiera.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="AdvChartC6.lib DlPrinter.lib tmsxlsc6.lib tmsexc6.lib tmsc6.lib VclSmp.lib 
+      dsnapcon.lib dsnapcrba.lib dss.lib lmd50se_B6.lib dclusr.lib 
+      CPortLibCB6.lib vclx.lib bcb2kaxserver.lib indy.lib dbxcds.lib dclocx.lib 
+      soaprtl.lib bcbie.lib nmfast.lib dbexpress.lib inetdbxpress.lib inetdb.lib 
+      inetdbbde.lib inet.lib xmlrtl.lib visualdbclx.lib ibxpress.lib teeqr.lib 
+      tee.lib teedb.lib teeui.lib bdecds.lib cds.lib dsnap.lib vcldbx.lib 
+      bdertl.lib qrpt.lib adortl.lib dbrtl.lib vcldb.lib bcbsmp.lib rtl.lib 
+      vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib bcbsmp.lib vcldb.lib dbrtl.lib adortl.lib qrpt.lib 
+      bdertl.lib vcldbx.lib dsnap.lib cds.lib bdecds.lib teeui.lib teedb.lib 
+      tee.lib teeqr.lib ibxpress.lib visualdbclx.lib xmlrtl.lib inet.lib 
+      inetdbbde.lib inetdb.lib inetdbxpress.lib dbexpress.lib nmfast.lib 
+      bcbie.lib soaprtl.lib dclocx.lib dbxcds.lib indy.lib bcb2kaxserver.lib 
+      vclx.lib CPortLibCB6.lib dclusr.lib lmd50se_B6.lib dss.lib dsnapcrba.lib 
+      dsnapcon.lib VclSmp.lib tmsc6.lib tmsexc6.lib tmsxlsc6.lib DlPrinter.lib 
+      AdvChartC6.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi adortl.bpi vcldb.bpi 
+      qrpt.bpi bdertl.bpi vcldbx.bpi dsnap.bpi cds.bpi bdecds.bpi teeui.bpi 
+      teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi visualclx.bpi visualdbclx.bpi 
+      vclie.bpi xmlrtl.bpi inet.bpi inetdbbde.bpi inetdbxpress.bpi inetdb.bpi 
+      nmfast.bpi bcbie.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="Aggiorna.cpp"/>
+    <INCLUDEPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;C:\Programmi\Borland\CBuilder6\Projects;C:\Grafikscan2100\Aggiorna\Sorgenti;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="$(BCB)\LIB\lmd50\MAIN;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;C:\Programmi\Borland\CBuilder6\Projects;C:\Grafikscan2100\Aggiorna\Sorgenti;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; 
+      -IC:\Programmi\Borland\CBuilder6\Projects 
+      -IC:\Grafikscan2100\Aggiorna\Sorgenti -I$(BCB)\include 
+      -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -5 -b- -k -y -v -vi- 
+      -c -tW -tWM"/>
+    <PFLAGS value="-N2C:\Aggiorna\Sorgenti\Obj -N0C:\Aggiorna\Sorgenti\Obj -$Y+ -$W -$O- -$A8 
+      -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-IC:\Aggiorna\Sorgenti\Obj -D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Aggiorna.res" FORMNAME="" UNITNAME="Aggiorna.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Aggiorna.cpp" FORMNAME="" UNITNAME="Aggiorna" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Main.cpp" FORMNAME="FormMain" UNITNAME="Main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PascalUty.pas" FORMNAME="" UNITNAME="PascalUty" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="GenModParam.cpp" FORMNAME="FGenModParam" UNITNAME="GenModParam" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Ethernet.cpp" FORMNAME="" UNITNAME="Ethernet" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TastieraNumerica.cpp" FORMNAME="FormTastieraNumerica" UNITNAME="TastieraNumerica" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Tastiera.cpp" FORMNAME="FormTastiera" UNITNAME="Tastiera" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1040
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=C:\Program Files\Borland\CBuilder6\Projects;C:\Programmi\Borland\CBuilder6\Projects;C:\Grafikscan2100\Aggiorna\Sorgenti;$(BCB)\include;$(BCB)\include\vcl
+Item1=C:\Programmi\Borland\CBuilder6\Projects;C:\Grafikscan2100\Aggiorna\Sorgenti;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=$(BCB)\LIB\lmd50\MAIN;C:\Program Files\Borland\CBuilder6\Projects;C:\Programmi\Borland\CBuilder6\Projects;C:\Grafikscan2100\Aggiorna\Sorgenti;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item1=C:\Program Files\Borland\CBuilder6\Projects;C:\Programmi\Borland\CBuilder6\Projects;C:\Grafikscan2100\Aggiorna\Sorgenti;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item2=C:\Programmi\Borland\CBuilder6\Projects;C:\Grafikscan2100\Aggiorna\Sorgenti;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=2
+Item0=$(BCB)\source\vcl;C:\Program Files\Borland\CBuilder6\Source\Indy\
+Item1=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=C:\Aggiorna\Sorgenti\Obj
+Item1=C:\Grafikscan2100\Aggiorna\Sorgenti\Obj
+
+[HistoryLists\hlFinalOutputDir]
+Count=3
+Item0=C:\Aggiorna\Eseguibile\
+Item1=C:\Grafikscan2100\Aggiorna\Eseguibile\
+Item2=C:\Grafikscan2100\Aggiorna\Eseguibile
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl;C:\Program Files\Borland\CBuilder6\Source\Indy\
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=1
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

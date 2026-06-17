@@ -1,6 +1,6 @@
 # Disk DescriptorFile
 version=1
-CID=bf1bdf9d
+CID=0a3fda37
 parentCID=ffffffff
 createType="monolithicFlat"
 
@@ -15,5 +15,5 @@ ddb.encoding = "UTF-8"
 ddb.geometry.cylinders = "15872"
 ddb.geometry.heads = "16"
 ddb.geometry.sectors = "63"
-ddb.longContentID = "dad802e5e722cd9df08ce27ebf1bdf9d"
+ddb.longContentID = "c8fdd8ff36f35e4e1fbf732e0a3fda37"
 ddb.virtualHWVersion = "21"
