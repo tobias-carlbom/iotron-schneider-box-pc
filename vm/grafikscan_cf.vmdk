@@ -1,0 +1,19 @@
+# Disk DescriptorFile
+version=1
+CID=bf1bdf9d
+parentCID=ffffffff
+createType="monolithicFlat"
+
+# Extent description
+RW 15998976 FLAT "grafikscan_cf.img" 0
+
+# The Disk Data Base 
+#DDB
+
+ddb.adapterType = "ide"
+ddb.encoding = "UTF-8"
+ddb.geometry.cylinders = "15872"
+ddb.geometry.heads = "16"
+ddb.geometry.sectors = "63"
+ddb.longContentID = "dad802e5e722cd9df08ce27ebf1bdf9d"
+ddb.virtualHWVersion = "21"

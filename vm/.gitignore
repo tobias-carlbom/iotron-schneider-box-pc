@@ -1,0 +1,12 @@
+# Raw disk images (too large for git)
+*.img
+
+# VMware runtime files
+*.vmsd
+*.vmss
+*.vmem
+*.vmsn
+*.vmxf
+*.log
+*.lck/
+*.scoreboard
