@@ -1,5 +1,7 @@
 # Raw disk images (too large for git)
 *.img
+*.vdi
+*.vhd
 
 # VMware runtime files
 *.vmsd
@@ -10,3 +12,12 @@
 *.log
 *.lck/
 *.scoreboard
+nvram
+
+# VirtualBox runtime files
+*.vbox-prev
+*.vbox-extpack
+
+# Installers
+*.exe
+*.iso
