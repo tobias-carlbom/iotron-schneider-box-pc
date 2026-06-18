@@ -31,6 +31,9 @@ if (-not (Test-Path $vdiPath)) {
     Write-Host "Converting raw image to VDI format..." -ForegroundColor Cyan
     & $vboxManage convertfromraw $imgPath $vdiPath --format VDI
     if ($LASTEXITCODE -ne 0) { Write-Host "ERROR: Conversion failed" -ForegroundColor Red; exit 1 }
+    # Resize VDI slightly to fix CHS geometry (995→996 cylinders).
+    # Without this, BIOS INT13h rejects reads to the EWF partition at cylinder 995.
+    & $vboxManage modifymedium disk $vdiPath --resize 7814
     Write-Host "Done: $vdiPath" -ForegroundColor Green
 } else {
     Write-Host "VDI already exists, skipping conversion." -ForegroundColor Yellow
@@ -51,16 +54,21 @@ if ($LASTEXITCODE -ne 0) { Write-Host "ERROR: Failed to create VM" -ForegroundCo
 # Step 4: Configure VM settings
 Write-Host "Configuring VM settings..." -ForegroundColor Cyan
 
-# Basic settings: 1GB RAM, 2 CPUs, BIOS firmware, 128MB VRAM
+# Basic settings: 1GB RAM, 1 CPU, BIOS, ACPI+IOAPIC, VBoxVGA graphics
+# CRITICAL: Must be 1 CPU with ACPI+IOAPIC — the XPe image uses ACPI uniprocessor HAL.
+# Wrong HAL config causes invisible BSOD (kernel halt before display init).
 & $vboxManage modifyvm $vmName `
     --memory 1024 `
-    --vram 128 `
-    --cpus 2 `
+    --vram 64 `
+    --cpus 1 `
     --firmware bios `
-    --graphicscontroller vboxsvga `
+    --acpi on `
+    --ioapic on `
+    --graphicscontroller VBoxVGA `
     --audio-driver none `
     --clipboard-mode bidirectional `
-    --rtc-use-utc off
+    --rtc-use-utc off `
+    --boot1 disk --boot2 none --boot3 none --boot4 none
 
 # USB 2.0 (EHCI) - requires Extension Pack
 Write-Host "Enabling USB 2.0 (EHCI)..." -ForegroundColor Cyan

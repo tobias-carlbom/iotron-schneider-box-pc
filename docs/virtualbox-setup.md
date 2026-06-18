@@ -89,12 +89,31 @@ After XP boots:
 - **Boot**: MBR → P1(ntldr) → boot.ini → P2(WINDOWS)
 - **Write filter**: EWF (Enhanced Write Filter) active - changes are lost on reboot
 
+## Critical VM Settings
+
+The XP Embedded image uses an ACPI uniprocessor HAL with IOAPIC. These settings MUST be correct or the VM will show a black screen (invisible BSOD before display driver loads):
+
+| Setting | Value | Why |
+|---------|-------|-----|
+| CPUs | 1 | XPe has uniprocessor HAL |
+| ACPI | ON | HAL requires ACPI tables |
+| IOAPIC | ON | HAL requires IO-APIC |
+| Graphics | VBoxVGA | VBoxSVGA not compatible with XP |
+| Storage | IDE/PIIX4 | XPe has native IDE drivers |
+| Boot order | Disk only | Skip floppy/CD probing |
+
+The VDI must be resized to 7814 MB after conversion (fixes CHS geometry — 995→996 cylinders for the EWF partition).
+
 ## Troubleshooting
+
+**Black screen (invisible BSOD)**: Check ACPI, IOAPIC, and CPU count. Wrong HAL config causes kernel halt before display initializes — no error message visible. See table above.
 
 **VM won't boot**: Make sure IDE controller (PIIX4) is used, not SATA/AHCI. The XP image has native IDE drivers.
 
 **No mouse**: Install Guest Additions (see above). Without them, click inside VM window and press Right Ctrl to release mouse.
 
 **Blue screen (BSOD)**: The image has AHCI drivers injected for physical hardware. In VirtualBox with IDE emulation this shouldn't happen. If it does, boot in Safe Mode (F8) and disable the iaStor service.
+
+**Slow first boot**: First boot on new virtual hardware takes several minutes for PnP device detection. Subsequent boots are faster.
 
 **Network timeout in Aggiorna**: The launcher pings 192.168.0.147, 192.168.0.145, 192.168.3.101 before starting Grafikscan. Without these devices, it will timeout. This is normal behavior.
