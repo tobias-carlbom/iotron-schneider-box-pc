@@ -1,0 +1,18 @@
+# Large disk image extractions
+vm/_extract/
+
+# VMware caches and state files
+vm/vmware/caches/
+vm/vmware/*.scoreboard
+vm/vmware/*.lck/
+vm/vmware/*.log
+
+# VMDK disk images (too large for git)
+vm/vmware/*.vmdk
+
+# Native Win11 runtime (large binary + calibration data)
+# Only documentation and setup scripts are tracked
+native/Grafikscan2100/
+native/Grafikscan3000/
+native/Aggiorna/
+native/screenshot*.png
