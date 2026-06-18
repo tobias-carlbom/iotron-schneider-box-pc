@@ -1,11 +1,11 @@
 # Disk DescriptorFile
 version=1
-CID=0a3fda37
+CID=f1afb4b9
 parentCID=ffffffff
 createType="monolithicFlat"
 
 # Extent description
-RW 15998976 FLAT "grafikscan_cf.img" 0
+RW 15998976 FLAT "../grafikscan_cf.img" 0
 
 # The Disk Data Base 
 #DDB
@@ -15,5 +15,5 @@ ddb.encoding = "UTF-8"
 ddb.geometry.cylinders = "15872"
 ddb.geometry.heads = "16"
 ddb.geometry.sectors = "63"
-ddb.longContentID = "c8fdd8ff36f35e4e1fbf732e0a3fda37"
+ddb.longContentID = "9a9ef9aecbca76218aee9020f1afb4b9"
 ddb.virtualHWVersion = "21"
