@@ -58,7 +58,7 @@ Write-Host "Configuring VM settings..." -ForegroundColor Cyan
 # CRITICAL: Must be 1 CPU with ACPI+IOAPIC — the XPe image uses ACPI uniprocessor HAL.
 # Wrong HAL config causes invisible BSOD (kernel halt before display init).
 & $vboxManage modifyvm $vmName `
-    --memory 1024 `
+    --memory 2048 `
     --vram 64 `
     --cpus 1 `
     --firmware bios `
